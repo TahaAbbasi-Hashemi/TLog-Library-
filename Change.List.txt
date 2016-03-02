@@ -1,0 +1,24 @@
+Version 1 (Nov 14th 2015)
+___________________
+ Most basic version of the libary, will work.
+
+
+Version 2 (Jan 6th 2016)
+__________________
+Added the ability to change the program while the libary is running
+Removed all aspects of hard code.
+Added the ability to store line numbers
+Added the abliity to store file names
+
+
+Version 3 
+_________________
+Fixed chaning the program while the libary is running
+Editing formating
+Added the ability to compress logs before writing them.
+
+
+
+To Come
+________________
+Log Rotation
