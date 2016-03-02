@@ -1,0 +1,11 @@
+﻿Build started 2016-01-05 10:21:18 AM.
+     1>Project "J:\C++\Mid Term\Mid Term\Mid Term.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         E:\Program Files (x86)\Visual Studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\C++\Mid Term\Debug\Mid Term.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"J:\C++\Mid Term\Debug\Mid Term.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\C++\Mid Term\Debug\Mid Term.lib" /MACHINE:X86 Debug\logging.obj
+         Debug\thread_names.obj
+         Mid Term.vcxproj -> J:\C++\Mid Term\Debug\Mid Term.exe
+     1>Done Building Project "J:\C++\Mid Term\Mid Term\Mid Term.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.12

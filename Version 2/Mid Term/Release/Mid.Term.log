@@ -1,0 +1,18 @@
+﻿Build started 2015-12-31 12:53:02 AM.
+     1>Project "J:\C++\Mid Term\Mid Term\Mid Term.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\Program Files (x86)\Visual Studio\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt logging.cpp thread_names.cpp
+         logging.cpp
+         thread_names.cpp
+       Link:
+         E:\Program Files (x86)\Visual Studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\C++\Mid Term\Release\Mid Term.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"J:\C++\Mid Term\Release\Mid Term.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\C++\Mid Term\Release\Mid Term.lib" /MACHINE:X86 /SAFESEH Release\logging.obj
+         Release\thread_names.obj
+         Generating code
+         All 802 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         Finished generating code
+         Mid Term.vcxproj -> J:\C++\Mid Term\Release\Mid Term.exe
+     1>Done Building Project "J:\C++\Mid Term\Mid Term\Mid Term.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.14

@@ -1,0 +1,89 @@
+'Nov 14 2015' 11:57:00 [Main Thread] <Always>    : A new program has started
+'Nov 14 2015' 11:57:00 [Main Thread] <Always>    : A logging program has just been started
+'Nov 14 2015' 11:57:00 [Main Thread] <Always>    : Currently what is being tested is audio
+'Nov 14 2015' 11:57:00 [Main Thread] <Debugging> : Trying to find analong input devices.
+'Nov 14 2015' 11:57:00 [Main Thread] <Info>      : Analong input device(s) has been detected.
+'Nov 14 2015' 11:57:00 [Main Thread] <Debugging> : Finding out all video input devices
+'Nov 14 2015' 11:57:00 [Main Thread] <Info>      : No video input device(s) have been detected.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Finding out all audio input devices
+'Nov 14 2015' 11:57:01 [Main Thread] <Success>   : Have found one or more audio input devices
+'Nov 14 2015' 11:57:01 [Main Thread] <Info>      : Starting to record audio or video input devices.
+'Nov 14 2015' 11:57:01 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Microphone (USB Sound Device)
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 11:57:01 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Realtek Digital Input (Realtek High Definition Audio)
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 11:57:01 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Line (USB Sound Device)
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 11:57:01 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : SPDIF In (USB Sound Device)
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 11:57:01 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 11:57:01 [Main Thread] <Info>      : All devices as of the start of the program have been detected.
+'Nov 14 2015' 12:01:00 [Main Thread] <Always>    : A new program has started
+'Nov 14 2015' 12:01:00 [Main Thread] <Always>    : A logging program has just been started
+'Nov 14 2015' 12:01:00 [Main Thread] <Always>    : Currently what is being tested is audio
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Trying to find analong input devices.
+'Nov 14 2015' 12:01:00 [Main Thread] <Info>      : Analong input device(s) has been detected.
+'Nov 14 2015' 12:01:00 [Main Thread] <Info>      : No video input device(s) have been detected.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Finding out all audio input devices
+'Nov 14 2015' 12:01:00 [Main Thread] <Info>      : Starting to record audio or video input devices.
+'Nov 14 2015' 12:01:00 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Microphone (USB Sound Device)
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 12:01:00 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Realtek Digital Input (Realtek High Definition Audio)
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 12:01:00 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Line (USB Sound Device)
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 12:01:00 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : SPDIF In (USB Sound Device)
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 12:01:00 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 12:01:00 [Main Thread] <Info>      : All devices as of the start of the program have been detected.
+'Nov 14 2015' 16:18:20 [Main Thread] <Always>    : A new program has started
+'Nov 14 2015' 16:18:20 [Main Thread] <Always>    : A logging program has just been started
+'Nov 14 2015' 16:18:20 [Main Thread] <Always>    : Currently what is being tested is audio
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Trying to find analong input devices.
+'Nov 14 2015' 16:18:20 [Main Thread] <Info>      : Analong input device(s) has been detected.
+'Nov 14 2015' 16:18:20 [Main Thread] <Info>      : No video input device(s) have been detected.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Finding out all audio input devices
+'Nov 14 2015' 16:18:20 [Main Thread] <Info>      : Starting to record audio or video input devices.
+'Nov 14 2015' 16:18:20 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Microphone (USB Sound Device)
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 16:18:20 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Line (USB Sound Device)
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 16:18:20 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : SPDIF In (USB Sound Device)
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 16:18:20 [Main Thread] <Success>   : Have found a new device
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the device name.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Realtek Digital Input (Realtek High Definition Audio)
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : Below is the WaveIn ID.
+'Nov 14 2015' 16:18:20 [Main Thread] <Debugging> : BLANK FOR NOW! FIX ME LATER
+'Nov 14 2015' 16:18:20 [Main Thread] <Info>      : All devices as of the start of the program have been detected.
