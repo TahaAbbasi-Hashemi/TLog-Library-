@@ -1,0 +1,237 @@
+~Null~
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Q
+W
+E
+R
+T
+Y
+U
+I
+O
+P
+A
+S
+D
+F
+G
+H
+J
+K
+L
+Z
+X
+C
+V
+B
+N
+M
+q
+w
+e
+r
+t
+y
+u
+i
+o
+p
+a
+s
+d
+f
+g
+h
+j
+k
+l
+z
+x
+c
+v
+b
+n
+m
+~
+`
+!
+@
+#
+$
+%
+^
+&
+*
+(
+)
+_
+-
++
+=
+{
+}
+[
+]
+|
+\
+:
+;
+"
+'
+<
+>
+,
+.
+?
+/
+ 
+ea
+ing
+ed
+ch
+ph
+ll
+ee
+ar
+ex
+ly
+and
+ew
+th
+ent
+lic
+le
+oo
+ar
+ee
+er
+es
+ss
+age
+pre
+per
+ess
+I 
+i 
+ I 
+ i 
+me
+me 
+ me 
+You
+you
+You 
+you 
+ you 
+and
+and 
+ and 
+The
+the
+The 
+the 
+ the 
+Time
+time
+Time 
+time 
+ time 
+to
+to 
+ to 
+of
+of 
+ of 
+in
+in 
+ in 
+for
+for 
+ for 
+on
+on 
+ on 
+with
+with 
+ with 
+at
+at 
+ at 
+by
+by 
+ by 
+from
+from 
+ from 
+about
+about 
+ about 
+after
+after 
+ after 
+next
+next 
+ next 
+important
+important 
+ important 
+a 
+ a 
+it
+it 
+ it 
+not
+not 
+ not 
+as
+as 
+ as 
+is
+is 
+ is 
+This
+this
+this 
+This 
+ this 
+but
+but 
+ but 
+or
+or 
+ or 
+an
+an 
+ an 
+will
+will 
+ will 
+there
+there 
+ there 
+log
+log 
+ log 
+text
+text 
+ text 
+.cpp
+.h
+.txt
+.log
+info
+success
+debug
+warning
+error
+always
+critical
