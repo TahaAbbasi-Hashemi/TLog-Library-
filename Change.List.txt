@@ -17,6 +17,13 @@ Fixed chaning the program while the libary is running
 Editing formating
 Added the ability to compress logs before writing them.
 
+Version 4 (November 10th 2018)
+________________
+Removed the compression because that put too much work on the thread making the log
+Make the code be easier to read and fixed some naming scheme 
+The code is actually faster now as there is less wasted processing
+This should be the last updated version for a while. 
+
 
 
 To Come
