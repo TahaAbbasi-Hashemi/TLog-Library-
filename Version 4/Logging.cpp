@@ -1,10 +1,10 @@
 #include "pch.h"
 #include "Logging.h"
 
-string ESeverity2String(ESeverity Serverity)
+std::string ESeverity2String(ESeverity Serverity)
 {
 	// This simply converts a ESeverity to a string
-	string severity;
+	std::string severity;
 
 	switch (Serverity)
 	{
@@ -39,6 +39,7 @@ Logging::Logging()
 	mAlive = false;			// This means the logger is not initalized
 	mDirectory = "RecordedLogs";
 	mLogFormat = "%D %t %T %L %S : %M";	// The basic log format
+	//mLogFormat = "%D - %t Thread:%T Line:%L Severity:%S Message:%M";
 	mThreadName = "LogProcessingThread";
 	mSemiDirectory = { "Thread", "File", "Severity", "Everything" };
 }
@@ -53,10 +54,10 @@ void Logging::WritingFunction(void)
 	// The purpose of the function is to take a log from the queue and put it in multiple files
 	// The main source of input into this function is from the queue and its output is the files
 	Log newLog;
-	string tempDirectory;
-	string tempFile;
-	string tempLine = "";
-	ofstream tempWrite;
+	std::string tempDirectory;
+	std::string tempFile;
+	std::string tempLine;
+	std::ofstream tempWrite;
 	bool found;
 
 	g_ThreadNames.addName(mThreadName);
@@ -69,15 +70,16 @@ void Logging::WritingFunction(void)
 		}	// pause if
 		if (mQueue.empty())
 		{
-			// This is if the queue is fully empty there is no reason to do anythign
+			// This is if the queue is fully empty there is no reason to do anything
 			continue;
 		}	// Queue if 
 
 		// Creating newLog 
 		newLog = mQueue.front();
-		mQueue.pop();	
+		mQueue.pop();
 
 		// Create Log to string
+		tempLine = "";
 		for (unsigned int i = 0; i < mLogFormat.length(); i++)
 		{
 			if (mLogFormat[i] == '%')
@@ -118,18 +120,18 @@ void Logging::WritingFunction(void)
 		}	// Log to string for loop
 
 		// Creating directories 
-		string test = "C:\\Users\\Taha Abbasi-Hashemi\\source\\repos\\Logging\\Logging";
+		std::string test = "C:\\Users\\Taha Abbasi-Hashemi\\source\\repos\\ConsolePokemon\\ConsolePokemon";
 		//tempDirectory = getDirectoryName(__FILE__)  + '\\' + mDirectory + '\\' + __DATE__;
-		tempDirectory = test  + '\\' + mDirectory;
-		CreateDirectory(string2wstring(tempDirectory).c_str(), NULL);
-		tempDirectory += ('\\' + __DATE__);
-		CreateDirectory(string2wstring(tempDirectory).c_str(), NULL);
-		//mkdir(string2wstring(tempDirectory).c_str());
+		tempDirectory = test + '\\' + mDirectory;
+		CreateDirectory(string2wstring(tempDirectory).c_str(), NULL);	// I am beyond lost why this is wrong
+		tempDirectory += '\\';
+		tempDirectory += __DATE__;
+		CreateDirectory(string2wstring(tempDirectory).c_str(), NULL);	// I am beyond lost why this is wrong
 		for (auto const& location : mSemiDirectory)
 		{
-			string tempString2;
+			std::string tempString2;
 			tempString2 = tempDirectory + '\\' + location;
-			CreateDirectory(string2wstring(tempString2).c_str(), NULL);
+			CreateDirectory(string2wstring(tempString2).c_str(), NULL);	// I am beyond lost why this is wrong
 		}	// Creating directory for loop
 
 		// Writing to file
@@ -138,32 +140,31 @@ void Logging::WritingFunction(void)
 			if (semi == "Thread")
 			{
 				mFileNames.push_back(newLog.Thread);
-				tempWrite.open(tempDirectory + '\\' + "Thread\\" + newLog.Thread + ".log");
+				tempWrite.open(tempDirectory + '\\' + "Thread\\" + newLog.Thread + ".log", std::ios::app);
 				tempWrite << tempLine << '\n';
 			}
 			if (semi == "File")
 			{
 				mFileNames.push_back(newLog.FileName);
-				tempWrite.open(tempDirectory + '\\' + "File\\" + newLog.FileName + ".log");
+				tempWrite.open(tempDirectory + '\\' + "File\\" + newLog.FileName + ".log", std::ios::app);
 				tempWrite << tempLine << '\n';
 			}
 			if (semi == "Severity")
 			{
 				mFileNames.push_back(ESeverity2String(newLog.Severity));
-				tempWrite.open(tempDirectory + '\\' + "Severity\\" + ESeverity2String(newLog.Severity) + ".log");
+				tempWrite.open(tempDirectory + '\\' + "Severity\\" + ESeverity2String(newLog.Severity) + ".log", std::ios::app);
 				tempWrite << tempLine << '\n';
 			}
 			tempWrite.close();
 		}// Organizing fileNames for loop
 		mSemiDirectory.push_back("Everything");
-		tempWrite.open(tempDirectory + '\\' + "Everything/Everything.log");
+		tempWrite.open(tempDirectory + '\\' + "Everything/Everything.log", std::ios::app);
 		tempWrite << tempLine << '\n';
 		tempWrite.close();
-
 	}	// while loop
 }
 
-string Logging::getFileName(string FileName)
+std::string Logging::getFileName(std::string FileName)
 {
 	// This takes ___FILE___ and breaks it down
 	// __FILE__ provides both the directory plus the file name. 
@@ -196,7 +197,7 @@ string Logging::getFileName(string FileName)
 	return FileName;
 }
 
-string Logging::getDirectoryName(string FileName)
+std::string Logging::getDirectoryName(std::string FileName)
 {
 	// This takes ___FILE___ and breaks it down
 	// __FILE__ provides both the directory plus the file name. 
@@ -223,10 +224,10 @@ string Logging::getDirectoryName(string FileName)
 	return FileName;
 }
 
-string Logging::getTime(void)
+std::string Logging::getTime(void)
 {
 	// This returns the current time in string format
-	string currentTime;
+	std::string currentTime;
 	char buffer[70];
 	time_t rawtime;
 	struct tm timeinfo;
@@ -241,7 +242,7 @@ string Logging::getTime(void)
 	return currentTime;
 }
 
-void Logging::___mAddLine___(string Message, string FileName, int LineNumber, ESeverity Severity)
+void Logging::___qwerty___(std::string Message, std::string FileName, int LineNumber, ESeverity Severity)
 {
 	// This is the real AddLine function
 	// This is where all the creation of Logs happen. 
@@ -290,7 +291,7 @@ bool Logging::initalize(void)
 	}
 	mPaused = false;
 	mAlive = true;
-	mThread = thread(&Logging::WritingFunction, this);
+	mThread = std::thread(&Logging::WritingFunction, this);
 	return true;	// This means the the logger has succesfully started
 }
 
@@ -300,13 +301,13 @@ bool Logging::terminate(void)
 	// After this function no more logs will be processed.
 	// Logs will  be accepted but nothing will be processed.
 	mAlive = false;
-	if (mThread.joinable() )
+	if (mThread.joinable())
 	{
 		mThread.join();
 		return true;
 	}
 	return false;
-//	return true;	// This means that the logger has successfully stopped
+	//	return true;	// This means that the logger has successfully stopped
 }
 
 bool Logging::getAline(void)
@@ -331,34 +332,34 @@ bool Logging::getEmpty(void)
 	return false;
 }
 
-string Logging::getDirectory(void)
+std::string Logging::getDirectory(void)
 {
 	// This returns the saving directory of the logger
 	return mDirectory;
 }
 
-string Logging::getLogFormat(void)
+std::string Logging::getLogFormat(void)
 {
 	// This returns the logging format of the logger
 	return mLogFormat;
 }
 
-string Logging::getThreadName(void)
+std::string Logging::getThreadName(void)
 {
 	// This returns the name of the thread processing logs 
 	return mThreadName;
 }
 
-vector<string> Logging::getSemiDirectory(void)
+std::vector<std::string> Logging::getSemiDirectory(void)
 {
 	// This returns the SemiDirectory
 	return mSemiDirectory;
 }
 
-bool Logging::changeDirectory(string newDirectory)
+bool Logging::changeDirectory(std::string newDirectory)
 {
 	// This allows for the program to change the saving Directory
-	if (mPaused)
+	if (!mPaused)
 	{
 		// This can only be run if there is no active logs being saved
 		// Returns true is the directory was changed
@@ -368,10 +369,10 @@ bool Logging::changeDirectory(string newDirectory)
 	return false;	// False is returned if the directory did not change
 }
 
-bool Logging::changeLogFormat(string newLogFormat)
+bool Logging::changeLogFormat(std::string newLogFormat)
 {
 	// This allows for the program to change the format if the logger is paused
-	if (mPaused)
+	if (!mPaused)
 	{
 		// This can only be run if there is no active logs being saved
 		// Returns true is the Logging format was changed
@@ -381,10 +382,10 @@ bool Logging::changeLogFormat(string newLogFormat)
 	return false;	// False is returned if nothing was changed
 }
 
-bool Logging::changeThreadName(string newThreadName)
+bool Logging::changeThreadName(std::string newThreadName)
 {
 	// This allows for the program to change the format if the logger is paused
-	if (mPaused)
+	if (!mPaused)
 	{
 		// This can only be run if there is no active logs being saved
 		// Returns true is the threadname was changed
@@ -394,10 +395,10 @@ bool Logging::changeThreadName(string newThreadName)
 	return false;	// False is returned if nothing was changed
 }
 
-bool Logging::changeSemiDirectory(vector<string> newSemiDirectory)
+bool Logging::changeSemiDirectory(std::vector<std::string> newSemiDirectory)
 {
 	// This allows for the program to change the semiDirectory only if the logger is paused
-	if (mPaused)
+	if (!mPaused)
 	{
 		// This can only run if there are no active logs being saved
 		// This returns true if the SemiDirectory is changed
@@ -407,9 +408,10 @@ bool Logging::changeSemiDirectory(vector<string> newSemiDirectory)
 	return false;
 }
 
-wstring string2wstring(string str)
+std::wstring string2wstring(std::string & str)
 {
 	// converts a string to wide string or wstring.
+	// Good god this is tiresome as hell.
 	int len;
 	int slength;
 
@@ -417,16 +419,16 @@ wstring string2wstring(string str)
 	len = MultiByteToWideChar(CP_ACP, 0, str.c_str(), slength, 0, 0);
 	wchar_t* buf = new wchar_t[len];
 	MultiByteToWideChar(CP_ACP, 0, str.c_str(), slength, buf, len);
-	wstring r(buf);
+	std::wstring r(buf);
 
 	delete[] buf;
 	return r;
 }
 
-string int2string(int num)
+std::string int2string(int num)
 {
 	// This turns an integer into a string.
-	stringstream ss;
+	std::stringstream ss;
 
 	ss << num;
 
