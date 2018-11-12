@@ -6,19 +6,17 @@
 #include <string>
 #include <thread>
 
-using namespace std;
-
 class ThreadName
 {
 private:
-	map<thread::id, string> names;
+	std::map<std::thread::id, std::string> names;
 
 public:
 	ThreadName();
 	~ThreadName();
-	bool addName(string newName);
-	bool changeName(string newName);
-	string getName(void);
+	bool addName(std::string newName);
+	bool changeName(std::string newName);
+	std::string getName(void);
 };
 
 #endif		// THREAD_NAME_H
