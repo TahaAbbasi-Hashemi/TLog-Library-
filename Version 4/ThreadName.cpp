@@ -1,28 +1,22 @@
-#include "pch.h"
-#include "ThreadName.h"
+#pragma once
+#ifndef THREAD_NAME_H
+#define THREAD_NAME_H
 
-using namespace std;
+#include <map>
+#include <string>
+#include <thread>
 
-ThreadName::ThreadName()
+class ThreadName
 {
-}
+private:
+	std::map<std::thread::id, std::string> names;
 
-ThreadName::~ThreadName()
-{
-}
+public:
+	ThreadName();
+	~ThreadName();
+	bool addName(std::string newName);
+	bool changeName(std::string newName);
+	std::string getName(void);
+};
 
-bool ThreadName::addName(string newName)
-{
-	// This function pairs the id of the thread to a actual name
-	names.insert(make_pair(this_thread::get_id(), newName));
-	return true;
-}
-
-string ThreadName::getName(void)
-{
-	// This function returns the name of the thread.
-	return names[this_thread::get_id()];
-}
-
-// Creating a global variable 
-ThreadName g_ThreadNames;
+#endif		// THREAD_NAME_H
