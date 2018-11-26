@@ -310,7 +310,7 @@ bool Logging::terminate(void)
 	//	return true;	// This means that the logger has successfully stopped
 }
 
-bool Logging::getAline(void)
+bool Logging::getAlive(void)
 {
 	// Returns the active state of the logger
 	return mAlive;
