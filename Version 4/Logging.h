@@ -48,7 +48,7 @@ private:
 	std::string mDirectory;	// This is the saving location of the logs
 	std::string mLogFormat;	// This is the order of the variables in the log
 	std::string mThreadName;	// This is thbe name of the thread processing the logs
-	std::thread mThread;
+	std::thread mThread;	// this is the thread that is called in initalize
 	std::vector<std::string> mSemiDirectory;	// This holds the semi direcotires
 	std::vector<std::string> mFileNames;		// This holds the file names with in the directories
 	std::queue<Log> mQueue;	// This is where all unprocesssed logs are stored
@@ -65,19 +65,19 @@ public:
 #define AddLine(message, severity) ___qwerty___(message, __FILE__, __LINE__, severity);
 	bool pause(void);	// Pauses the logging process
 	bool resume(void);	// Resumses the logging process
-	bool initalize(void);
-	bool terminate(void);
-	bool getAline(void);
-	bool getPaused(void);
-	bool getEmpty(void);
-	std::string getDirectory(void);
-	std::string getLogFormat(void);
-	std::string getThreadName(void);
-	std::vector<std::string> getSemiDirectory(void);
-	bool changeDirectory(std::string newDirectory);
-	bool changeLogFormat(std::string newLogFormat);
-	bool changeThreadName(std::string newThreadName);
-	bool changeSemiDirectory(std::vector<std::string> newSemiDirectory);
+	bool initalize(void);	// starts the logger and creates a new thread
+	bool terminate(void);	// This kills the thread and ends the logger
+	bool getAlive(void);	// This returns if the program has been initalized or if a thread is running
+	bool getPaused(void);	// This returns if the program is paused or not paused
+	bool getEmpty(void);	// This returns if the logging queue is currently empty
+	std::string getDirectory(void);	// This returns the saving directory
+	std::string getLogFormat(void);	// this returns the log saving fomrat
+	std::string getThreadName(void);	// This returns the name of the writing thread
+	std::vector<std::string> getSemiDirectory(void);	// this returns all the semi directories
+	bool changeDirectory(std::string newDirectory);	// this allows the user to change the saving directory
+	bool changeLogFormat(std::string newLogFormat);	// this allows the user to change the log saving format
+	bool changeThreadName(std::string newThreadName);	// this allows the user to change the name of the thread
+	bool changeSemiDirectory(std::vector<std::string> newSemiDirectory);	// This allows the user to change the semi directories
 };
 
 std::wstring string2wstring(std::string & str);
