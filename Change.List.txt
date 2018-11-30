@@ -24,6 +24,11 @@ Make the code be easier to read and fixed some naming scheme
 The code is actually faster now as there is less wasted processing
 This should be the last updated version for a while. 
 
+Version 4.1 (November 29th 2018) 
+________________
+Adding proper design patterns, 
+Adding more proper documentation for none easily understandable functions. 
+
 
 
 To Come
